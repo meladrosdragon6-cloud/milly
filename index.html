@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Millicent's Hospitality & Management Course</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Millicent's Hospitality & Management Course</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#notes">Notes</a>
+      <a href="#activities">Activities</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#my-photos">My Hospitality Photos</a>
+      <a href="#resources">Resources</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#profile">Profile</a>
+    </nav>
+    <button id="themeToggle">Switch Theme</button>
+  </header>
 
+  <main>
+    <section id="home">
+      <h2>Welcome!</h2>
+      <p>Hello, I'm Millicent. This is my personal website to organize all my hospitality & management notes, activities, photos, and resources. Feel free to explore!</p>
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Hospitality welcome" class="hero-img">
+      <div id="motivation" class="motivation-block">
+        <h3>Motivation for Today</h3>
+        <blockquote id="motivationQuote">
+          "Success is the sum of small efforts, repeated day in and day out."
+        </blockquote>
+        <button id="newMotivationBtn">Show me another quote</button>
+      </div>
+    </section>
+
+    <section id="notes">
+      <h2>Course Notes</h2>
+      <input type="text" id="searchNotes" placeholder="Search notes...">
+      <form id="noteForm">
+        <input type="text" id="noteTitle" placeholder="Note Title" required>
+        <textarea id="noteContent" placeholder="Write your note here..." required></textarea>
+        <input type="text" id="noteTags" placeholder="Tags (comma-separated)">
+        <select id="noteCategory">
+          <option value="">Select Category</option>
+          <option value="Lectures">Lectures</option>
+          <option value="Assignments">Assignments</option>
+          <option value="Events">Events</option>
+          <option value="Other">Other</option>
+        </select>
+        <button type="submit">Add Note</button>
+      </form>
+      <ul id="notesList"></ul>
+    </section>
+
+    <section id="activities">
+      <h2>School Activities</h2>
+      <input type="text" id="searchActivities" placeholder="Search activities...">
+      <form id="activityForm">
+        <input type="text" id="activityTitle" placeholder="Activity Title" required>
+        <input type="date" id="activityDate" required>
+        <textarea id="activityDesc" placeholder="Activity Description"></textarea>
+        <input type="text" id="activityTags" placeholder="Tags (comma-separated)">
+        <select id="activityCategory">
+          <option value="">Select Category</option>
+          <option value="Lecture">Lecture</option>
+          <option value="Event">Event</option>
+          <option value="Assignment">Assignment</option>
+          <option value="Extracurricular">Extracurricular</option>
+        </select>
+        <button type="submit">Add Activity</button>
+      </form>
+      <ul id="activitiesList"></ul>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <p>Photos that capture the hospitality spirit:</p>
+      <div class="gallery-photos">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Students enjoying hospitality class" class="gallery-img">
+          <figcaption>Students enjoying hospitality class</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Hotel Lobby" class="gallery-img">
+          <figcaption>Hotel Lobby</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Restaurant table setup" class="gallery-img">
+          <figcaption>Restaurant table setup</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Teamwork in hospitality" class="gallery-img">
+          <figcaption>Teamwork in hospitality</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="my-photos">
+      <h2>My Hospitality Photos</h2>
+      <p>Add and view your own hospitality photos here. Only you can see these, and they’re stored in your browser.</p>
+      <input type="file" id="photoInput" accept="image/*" multiple>
+      <div id="myPhotosList" class="gallery-photos"></div>
+    </section>
+
+    <section id="resources">
+      <h2>Student Resources</h2>
+      <ul id="resourcesList">
+        <li><a href="https://unsplash.com/s/photos/hospitality" target="_blank">Unsplash: Hospitality Photos</a></li>
+        <li><a href="https://www.coursera.org/courses?query=hospitality%20management" target="_blank">Coursera: Hospitality Management Courses</a></li>
+        <li><a href="https://www.youtube.com/results?search_query=hospitality+management" target="_blank">YouTube: Hospitality Management</a></li>
+        <li><a href="https://hospitalityinsights.ehl.edu/" target="_blank">EHL Hospitality Insights</a></li>
+      </ul>
+    </section>
+
+    <section id="calendar">
+      <h2>Calendar</h2>
+      <div id="calendarContainer"></div>
+    </section>
+
+    <section id="profile">
+      <h2>My Profile</h2>
+      <div id="profileCard">
+        <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=200&q=80" alt="Millicent Profile" class="profile-img">
+        <div>
+          <h3>Millicent</h3>
+          <p>Hospitality & Management Student</p>
+          <p>Email: <a href="mailto:millicent@example.com">millicent@example.com</a></p>
+          <p>GitHub: <a href="https://github.com/meladrosdragon6-cloud" target="_blank">meladrosdragon6-cloud</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Millicent's Hospitality & Management Course</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
